@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulir Kelola Ruangan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        fieldset {
+            border: 1px solid black;
+            padding: 15px;
+            width: 500px;
+       
+        legend {
+            font-weight: bold;
+            padding: 0 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 5px 0;
+            vertical-align: top;
+        }
+        td:first-child {
+            width: 30%;
+            padding-right: 15px;
+        }
+        input[type="text"], textarea, select {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 5px;
+            border: 1px solid black;
+        }
+        textarea {
+            resize: none;
+        }
+        .fasilitas-group input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        .button-group {
+            text-align: left;
+            padding-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<form action="method="post">
+    <fieldset>
+        <legend>Kelola Ruangan</legend>
+        <table>
+            <tr>
+                <td><label for="nama_ruangan">Nama Ruangan</label></td>
+                <td><input type="text" id="nama_ruangan" name="nama_ruangan"></td>
+            </tr>
+
+            <tr>
+                <td><label for="kategori">Kategori</label></td>
+                <td>
+                    <select id="kategori" name="kategori">
+                        <option value="aula">Auto</option>
+                        <option value="kelas">Kelas</option>
+                        <option value="laboratorium">Laboratorium</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="deskripsi">Deskripsi Ruangan</label></td>
+                <td>
+                    <textarea id="deskripsi" name="deskripsi" rows="3"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label>Fasilitas Ruangan</label></td>
+                <td class="fasilitas-group">
+                    <input type="checkbox" id="sound_system">
+                    <label for="sound_system">Sound System</label>
+                    
+                    <input type="checkbox" id="wifi">
+                    <label for="wifi">Wifi</label>
+                    
+                    <input type="checkbox" id="layar_besar">
+                    <label for="layar_besar">Layar Besar</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="kapasitas">Kapasitas</label></td>
+                <td><input type="text" id="kapasitas" name="kapasitas"></td>
+            </tr>
+
+            <tr>
+                <td><label for="lokasi_ruangan">Lokasi Ruangan</label></td>
+                <td><input type="text" id="lokasi_ruangan" name="lokasi_ruangan"></td>
+            </tr>
+            
+            <tr>
+                <td></td>
+                <td class="button-group">
+                    <input type="submit" value="Simpan">
+                    <input type="reset" value="Reset">
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+</form>
+
+</body>
+</html>
